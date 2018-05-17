@@ -2,8 +2,8 @@
   (:require [clojure.test :refer :all]
             [my-exercise.ocd-ids :refer :all]))
 
-(deftest by-address-test
-  (let [ids (by-address {:state "SOMESTATE"
+(deftest for-address-test
+  (let [ids (for-address {:state "SOMESTATE"
                          :city "SOMECITY"})]
     (testing "country-level"
       (is (contains? ids "ocd-division/country:us")))
